@@ -1,13 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css" type="text/css">
-  <title>Clima</title>
-</head>
-<body>  
-  <script type="text/javascript" src="main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <title>Clima</title>
+  </head>
+  <body>
+    <header class="theme">
+      <div id="logo">
+        <img src="" alt="logo" />
+      </div>
+      <div id="search_container">
+        <img src="" />
+        <input type="text" placeholder="Buscar" />
+      </div>
+    </header>
+    <div id="card_main">
+      <div id="main_img_city">
+        <img src="" alt="representacion del Clima" />
+        <span id="city">Penaflor, Chile</span>
+      </div>
+      <div id="container_current">
+        <span id="temp">23 °c</span>
+        <span id="description">Soleado</span>
+        <img src="" id="icon_weather" />
+      </div>
+    </div>
+    <div id="card_details">
+      <span class="current_details">Minima (°c)</span>
+      <span id="temp_min">15.5°</span>
+      <span class="current_details">Maxima (°c)</span>
+      <span id="temp_max">32°</span>
+      <span class="current_details">Sensación Term. (°c)</span>
+      <span id="feels_like">31°</span>
+      <span class="current_details">Humidad</span>
+      <span id="humidity">30%</span>
+      <span class="current_details">UV</span>
+      <span id="UV">8</span>
+      <span class="current_details">Viento</span>
+      <span id="wind">Sur 10km/h</span>
+      <span class="current_details">Visibilidad</span>
+      <span id="visibility">10 km</span>
+    </div>
+    <footer class="theme">&copy;2023, derechos del autor</footer>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
 </html>

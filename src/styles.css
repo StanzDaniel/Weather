@@ -4,3 +4,161 @@
   box-sizing: border-box;
   touch-action: manipulation;
 }
+
+  span, img {
+    display: block;
+  }
+
+
+
+
+
+/* -------------------------------- */
+/*         #Layout--Design         */
+/* -------------------------------- */
+
+body {
+  background-color: #f2f2f2;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 10% 1.5fr 1fr 10%;
+  grid-template-rows: 7rem 1fr 3rem;
+  grid-template-areas: 
+    "header header header header"
+    ". mainCard details ."
+    "footer footer footer footer";
+    gap: 3rem 0;
+}
+
+.theme { background-color: #82b1d4; }
+
+input::placeholder { color: rgba(0, 0, 0, 0.4); }
+
+
+
+
+
+/* -------------------------------- */
+/*         #Section--Header         */
+/* -------------------------------- */
+
+header {
+  display: flex;
+  align-items: center;
+  grid-area: header;
+}
+
+#logo {
+  width: 4rem;
+  height: 4rem;
+  border: solid 1px #000;
+  position: relative;
+  left: 1.5rem;
+}
+
+#search_container {
+  margin: 0 auto;
+  width: 40%;
+  display: flex;
+}
+
+#search_container img{
+  width: 1rem;
+  height: 1rem;
+  position: relative;
+  top: 0.7rem;
+  left: 1.5rem;
+  background: #000;
+}
+
+#search_container input {
+  width: 100%;
+  padding: 0.6rem 2rem;
+  border: solid 0.12rem #ddd;
+  border-radius: 0.15rem;
+}
+
+
+
+
+
+/* -------------------------------- */
+/*         #Section--Main         */
+/* -------------------------------- */
+
+#card_main {
+  background-color: #fff;
+  border: solid 0.12rem #ccc;
+  border-radius: 0.20rem;
+  grid-area: mainCard;
+  width: 80%;  
+}
+
+  #main_img_city {
+    width: 100%;
+    height: 80%;
+    background: #ccc;
+  }
+  
+    #main_img_city #city {
+      text-align: right;
+      font-size: 1.7rem;
+      font-weight: 700;
+      margin-right: 4%;
+      word-wrap: break-word;
+    }
+  
+  #card_main #container_current {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4%;
+  }
+  
+    #card_main #container_current #temp        { font-size:   2rem; }
+    #card_main #container_current #description { font-size: 1.5rem; }
+    
+    #card_main #container_current #icon_weather {
+      width: 2.28rem;
+      height: 2.28rem;
+      border: solid 1px #000;
+    }
+
+    
+#card_details {
+  background-color: #ccc;
+  grid-area: details;
+  width: 100%;
+  display: grid;
+  grid-template-columns: max-content auto;
+  grid-template-rows: repeat(7, minmax(1rem, 1fr));
+  align-items: end;
+  justify-items: stretch;
+  padding: 0 5% 5% 5%;
+}
+
+  #card_details span {
+    border-bottom: solid 0.1rem #fff;
+    text-align: center;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+  }
+  
+  #card_details .current_details {
+    grid-column: 1 / 2;  
+  }
+
+
+
+
+
+/* -------------------------------- */
+/*         #Section--Footer         */
+/* -------------------------------- */
+
+footer {
+  grid-area: footer;
+  padding: 1rem;
+  text-align: right;
+}
