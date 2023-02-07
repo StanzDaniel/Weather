@@ -1,8 +1,15 @@
-* {
+
+html {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+}
+
+html * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   touch-action: manipulation;
+  font-family: 'Open Sans', sans-serif;
 }
 
 span,
@@ -44,19 +51,30 @@ header {
   display: flex;
   align-items: center;
   grid-area: header;
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
 }
 
-#logo {
+header #logo {
   width: 4rem;
   height: 4rem;
-  border: solid 1px #000;
-  position: relative;
-  left: 1.5rem;
+  position: absolute;
+  margin-left: 1.5rem;
+}
+
+header h1 {
+  width: 10%;
+  height: 4rem;
+  position: absolute;
+  left: 4.5rem;  
+  font-size: 2.5vw;
+  line-height: 2.5vw;
+  color: #fff;
+  text-shadow: 0.15rem 0.15rem  rgb(115, 129, 176);
 }
 
 #search_container {
   margin: 0 auto;
-  width: 40%;
+  width: 45%;
   display: flex;
 }
 
@@ -66,15 +84,20 @@ header {
   position: relative;
   top: 0.7rem;
   left: 1.5rem;
-  background: #000;
 }
 
 #search_container input {
   width: 100%;
-  padding: 0.6rem 2rem;
+  font-size: 1rem;
+  padding: 0.5rem 2rem;
   border: solid 0.12rem #ddd;
   border-radius: 0.15rem;
+  outline: none;
 }
+
+  #search_container input:focus {
+    border: solid 0.15rem #7E82E0;
+  }
 
 /* -------------------------------- */
 /*         #Section--Main         */
@@ -87,20 +110,29 @@ header {
   grid-area: mainCard;
   width: 80%;
   justify-self: center;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
 }
 
 #main_img_city {
   width: 100%;
   height: 80%;
   background: #ccc;
+  position: relative;  
+  overflow-wrap: normal;
 }
 
+#main_img_city img {
+  width: 100%;
+  height: 100%;
+}
 #main_img_city #city {
   text-align: right;
   font-size: 2rem;
   font-weight: 700;
-  margin-right: 4%;
-  word-wrap: break-word;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  text-shadow: 0 0 0.4rem rgba(255, 255, 255, 0.4);
 }
 
 #card_main #container_current {
@@ -122,16 +154,13 @@ header {
 }
 
 #card_main #container_current #icon_weather {
-  width: 2.28rem;
-  height: 2.28rem;
-  border: solid 1px #000;
+  width: 3.5rem;
+  height: 3.5rem;
 }
 
 #card_details {
   grid-area: details;
   background-color: #ccc;
-  /* max-width: 65%;
-  min-width: 25vw; */
   margin-bottom: 2rem;
   justify-self: center;
   display: grid;
