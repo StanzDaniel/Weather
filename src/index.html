@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <title>Clima</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar bg-primary">
+        <div class="container-fluid justify-content-around">
+          <a class="navbar-brand d-flex align-items-center">
+            <img class="me-1" src="../img/logo.png" alt="logo" />
+            <p
+              class="h3"
+              style="
+                color: #fff;
+                text-shadow: 0.15rem 0.15rem rgb(115, 129, 176);
+              "
+            >
+              Tiempo y Clima
+            </p>
+          </a>
+          <div class="d-flex">
+            <input
+              class="form-control me-1"
+              type="search"
+              placeholder="Buscar"
+            />
+            <button class="btn btn-dark" type="submit">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="currentColor"
+                class="bi bi-search"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="row row-cols-1 row-cols-md-2 g-0">
+      <div class="col d-flex justify-content-center">
+        <div class="card mt-3 mx-4" style="max-width: 35rem">
+          <img
+            src="../img/day_sunny.jpg"
+            class="card-img-top"
+            alt="representacion del Clima"
+          />
+          <div class="card-img-overlay h2 text-end">Penaflor, Chile</div>
+          <div
+            class="card-body d-flex justify-content-between align-items-center"
+          >
+            <div class="card-text h1">23 °c</div>
+            <div class="card-text h2">Soleado</div>
+            <img
+              src="https://cdn.weatherapi.com/weather/64x64/day/122.png"
+              id="icon_weather"
+            />
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </div>
+        </div>
+      </div>
+      <div class="col d-flex justify-content-center">
+        <div class="card mt-3 mx-4" style="width: 35rem">
+          <div class="card-body">
+            <ul class="list-group">
+              <li class="list-group-item d-flex">
+                <div>Minima (°c)</div>
+                <div class="flex-fill text-center" id="temp_min">15.5°</div>
+              </li>
+              <li class="list-group-item d-flex">
+                <div>Maxima (°c)</div>
+                <div class="flex-fill text-center" id="temp_max">32°</div>
+              </li>
+              <li class="list-group-item d-flex">
+                <div>Sensación Term. (°c)</div>
+                <div class="flex-fill text-center" id="feels_like">31°</div>
+              </li>
+              <li class="list-group-item d-flex">
+                <div>Humidad</div>
+                <div class="flex-fill text-center" id="humidity">30%</div>
+              </li>
+              <li class="list-group-item d-flex">
+                <div>UV</div>
+                <div class="flex-fill text-center" id="UV">8</div>
+              </li>
+              <li class="list-group-item d-flex">
+                <div>Viento</div>
+                <div class="flex-fill text-center" id="wind">Sur 10km/h</div>
+              </li>
+              <li class="list-group-item d-flex">
+                <div>Visibilidad</div>
+                <div class="flex-fill text-center" id="visibility">10 km</div>
+              </li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="container-fluid bg-primary mt-3 p-2 text-end">
+      &copy;2023, derechos del autor
+    </footer>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>

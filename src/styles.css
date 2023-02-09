@@ -1,0 +1,12 @@
+html {
+  font-family: 'Open Sans', sans-serif, arial, sans-serif;
+}
+.col {
+  padding: 0;
+}
+@media screen and (min-height: 962px) {
+  footer {
+    position: fixed;
+    bottom: 0;
+  }
+}
