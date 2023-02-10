@@ -1,12 +1,22 @@
 html {
   font-family: 'Open Sans', sans-serif, arial, sans-serif;
 }
+
 .col {
   padding: 0;
 }
+
 @media screen and (min-height: 962px) {
   footer {
     position: fixed;
     bottom: 0;
   }
+}
+
+.text-border {
+  text-shadow:
+    -0.06rem 0 0.2rem rgba(255, 255, 255, 0.2),
+    0 0.06rem 0.2rem rgba(255, 255, 255, 0.2),
+    0.06rem 0 0.2rem rgba(255, 255, 255, 0.2),
+    0 -0.06rem 0.2rem rgba(255, 255, 255, 0.2);
 }
