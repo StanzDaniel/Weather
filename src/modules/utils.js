@@ -1,5 +1,3 @@
-import { getInfoAPI } from "../main.js";
-
 export function getLocation(callback) {
   navigator.geolocation.getCurrentPosition(
     position => {
@@ -12,8 +10,8 @@ export function getLocation(callback) {
 }
 
 export function isDay(isDay) {
-  if (!isDay) return '../img/night.jpg';
-  return '../img/day.jpg';
+  if (!isDay) return './img/night.jpg';
+  return './img/day.jpg';
 }
 
 export function toSpanish(data, template, isDay) {

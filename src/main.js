@@ -14,8 +14,7 @@ export async function getInfoAPI(location) {
 }
 
 window.onload = () => {
-  // getLocation(getInfoAPI);
-  getInfoAPI('-33.582788872337595, -70.9070157759715');
+  getLocation(getInfoAPI);
 
   document.querySelector('#search').addEventListener('keyup', e => search(e));
   document.querySelector('#form').addEventListener('submit', (e) => {
