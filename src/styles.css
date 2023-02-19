@@ -2,6 +2,33 @@ html {
   font-family: 'Open Sans', sans-serif, arial, sans-serif;
 }
 
+ul, li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+#container_list {
+  position: absolute;
+  top:74%; 
+  border-radius: 0.4rem; 
+  z-index: 1;
+  display: none;
+}
+
+#search:focus + #container_list {
+  display: block;
+}
+
+#list_search li {
+  padding-bottom: 1.5rem;
+  cursor: pointer;
+}
+
+#list_search li:last-child {
+  padding-bottom: 0;
+}
+
 .col {
   padding: 0;
 }
